@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeepSolutions — Intelligent SaaS Consultancy</title>
+    <meta
+      name="description"
+      content="DeepSolutions helps SaaS teams build resilient products with expert strategy, design, and engineering support."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#ecf3ff",
+                100: "#d7e6ff",
+                200: "#adcaff",
+                300: "#7caaff",
+                400: "#4b8bff",
+                500: "#216df6",
+                600: "#0d4ed4",
+                700: "#083aa8",
+                800: "#042677",
+                900: "#021748"
+              }
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      @font-face {
+        font-family: "Wittgenstein";
+        src: url("fonts/Wittgenstein-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Wittgenstein";
+        src: url("fonts/Wittgenstein-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Wittgenstein";
+        src: url("fonts/Wittgenstein-SemiBold.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Wittgenstein";
+        src: url("fonts/Wittgenstein-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      body {
+        font-family: "Wittgenstein", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background-image: url("images/background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-slate-100">
+    <div class="relative min-h-screen overflow-hidden">
+      <div
+        class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-bl from-primary-900 via-slate-950 to-slate-950 opacity-90"
+      ></div>
+      <header class="border-b border-white/5 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+          <a href="/" class="flex items-center space-x-3">
+            <span
+              class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500/10 text-xl font-semibold text-primary-200 ring-1 ring-primary-500/40"
+              aria-hidden="true"
+              >DS</span
+            >
+            <div>
+              <p class="text-lg font-semibold text-white">DeepSolutions</p>
+              <p class="text-sm text-slate-400">Intelligent SaaS Consultancy</p>
+            </div>
+          </a>
+          <nav class="hidden items-center space-x-8 text-sm font-medium text-slate-300 md:flex">
+            <a href="/" class="transition hover:text-white">Home</a>
+            <a href="privacy/" class="transition hover:text-white">Privacy</a>
+            <a href="terms/" class="transition hover:text-white">Terms</a>
+            <a href="mailto:hello@deepsolutions.co" class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-white transition hover:border-white/20 hover:bg-white/10"
+              >Contact</a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="relative border-b border-white/5">
+          <div class="absolute inset-x-0 -top-24 -z-10 flex justify-center blur-3xl">
+            <div
+              class="h-72 w-[40rem] rounded-full bg-primary-500/40 opacity-50"
+              aria-hidden="true"
+            ></div>
+          </div>
+          <div class="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-24 text-center">
+            <span class="rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-widest text-primary-200">
+              Strategize • Build • Scale
+            </span>
+            <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
+              Trusted partners for your next wave of SaaS growth
+            </h1>
+            <p class="max-w-2xl text-lg text-slate-300">
+              DeepSolutions blends product strategy, design, and engineering expertise to help
+              SaaS teams ship faster without compromising quality. We guide your vision from
+              idea to production launch.
+            </p>
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#contact"
+                class="rounded-full bg-primary-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:bg-primary-400"
+                >Schedule a call</a
+              >
+              <a
+                href="mailto:hello@deepsolutions.co"
+                class="rounded-full border border-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/20 hover:bg-white/5"
+                >Email the team</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-white/5 bg-slate-950/80">
+        <div
+          class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-slate-400 md:flex-row md:items-center md:justify-between"
+        >
+          <p>&copy; <span id="year"></span> DeepSolutions. All rights reserved.</p>
+          <div class="flex gap-5">
+            <a href="privacy/" class="transition hover:text-white">Privacy Policy</a>
+            <a href="terms/" class="transition hover:text-white">Terms of Service</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
