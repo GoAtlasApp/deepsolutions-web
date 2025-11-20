@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Careers — DeepSolutions</title>
+    <meta
+      name="description"
+      content="Join the DeepSolutions team. Explore career opportunities and help us build products that make a difference."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <style>
+      @font-face {
+        font-family: "Wittgenstein";
+        src: url("../fonts/Wittgenstein-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Wittgenstein";
+        src: url("../fonts/Wittgenstein-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Wittgenstein";
+        src: url("../fonts/Wittgenstein-SemiBold.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Wittgenstein";
+        src: url("../fonts/Wittgenstein-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      body {
+        font-family: "Wittgenstein", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background-color: #fff;
+        color: rgba(19, 23, 37, 0.88);
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fadeInUp {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      .animate-delay-100 {
+        animation-delay: 0.1s;
+        opacity: 0;
+      }
+
+      .animate-delay-200 {
+        animation-delay: 0.2s;
+        opacity: 0;
+      }
+
+      .animate-delay-300 {
+        animation-delay: 0.3s;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-transparent">
+    <div class="relative flex min-h-screen flex-col">
+      <div class="relative h-56 w-full overflow-hidden">
+        <div
+          class="absolute inset-0 bg-cover bg-center"
+          style="background-image: url('../images/top.png');"
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/40"></div>
+        <header class="absolute inset-x-0 top-0">
+          <div class="mx-auto flex w-full max-w-6xl justify-center px-6 py-6">
+            <nav class="hidden items-center space-x-10 text-sm font-medium text-white/80 md:flex">
+              <a href="../" class="transition hover:text-white">Welcome</a>
+              <a href="../about/" class="transition hover:text-white">About</a>
+              <a
+                href="https://goatlas.app"
+                target="_blank"
+                rel="noopener"
+                class="transition hover:text-white"
+                >GoAtlas</a
+              >
+              <a href="./" aria-current="page" class="text-white">Careers</a>
+            </nav>
+          </div>
+        </header>
+      </div>
+
+      <main class="flex flex-1 justify-center px-6 pb-24 pt-16">
+        <div class="w-full max-w-3xl">
+          <div class="text-center">
+            <nav class="mb-8 text-xs font-semibold uppercase tracking-[0.35em] text-slate-400 animate-fadeInUp">
+              <span>Careers</span>
+            </nav>
+
+            <h1 class="text-4xl font-semibold text-slate-900 sm:text-5xl animate-fadeInUp animate-delay-100">
+              Join Our Team
+            </h1>
+            <p class="mx-auto max-w-2xl mt-6 text-lg leading-relaxed text-slate-600 animate-fadeInUp animate-delay-200">
+              We're a small team building GoAtlas and working on products that make a difference.
+            </p>
+          </div>
+
+          <div class="mt-16 animate-fadeInUp animate-delay-300">
+            <div class="rounded-2xl border border-slate-200 bg-white p-12 text-center shadow-sm">
+              <h2 class="text-2xl font-semibold text-slate-900">Want to Join Us?</h2>
+              <p class="mt-6 text-base leading-relaxed text-slate-600">
+                We don't have any specific open positions listed at the moment, but we're always interested in
+                meeting talented people who are passionate about building great products.
+              </p>
+              <p class="mt-4 text-base leading-relaxed text-slate-600">
+                If you'd like to be part of our team, send us your CV and tell us about yourself — what you do,
+                what you're passionate about, and why you'd like to work with us.
+              </p>
+              <a
+                href="mailto:contact@deepsolutions.llc"
+                class="mt-8 inline-flex items-center justify-center whitespace-nowrap rounded-full border border-slate-300 bg-slate-900 px-8 py-3 text-sm font-medium text-white transition hover:bg-slate-800"
+              >
+                contact@deepsolutions.llc
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-8 text-sm text-slate-500">
+          <div class="flex items-center gap-8">
+            <a href="mailto:contact@deepsolutions.llc" class="transition hover:text-slate-900">
+              Contact
+            </a>
+            <span class="text-slate-400 cursor-not-allowed">LinkedIn</span>
+          </div>
+          <p class="text-xs text-slate-400">
+            &copy; <span id="year"></span> Deep Solutions LLC.
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

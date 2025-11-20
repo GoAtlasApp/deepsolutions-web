@@ -49,11 +49,54 @@
         background-attachment: fixed;
         color: rgba(248, 244, 255, 0.9);
       }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .animate-fadeInUp {
+        animation: fadeInUp 1s ease-out forwards;
+      }
+
+      .animate-fadeIn {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      .animate-delay-200 {
+        animation-delay: 0.2s;
+        opacity: 0;
+      }
+
+      .animate-delay-400 {
+        animation-delay: 0.4s;
+        opacity: 0;
+      }
+
+      .animate-delay-600 {
+        animation-delay: 0.6s;
+        opacity: 0;
+      }
     </style>
   </head>
   <body class="min-h-screen bg-transparent">
     <div class="relative flex min-h-screen flex-col">
-      <header class="bg-transparent">
+      <header class="bg-transparent animate-fadeIn">
         <div class="mx-auto flex w-full max-w-6xl justify-center px-6 py-8">
           <nav class="hidden items-center space-x-10 text-sm font-medium text-white/80 md:flex">
             <a href="/" class="transition hover:text-white">Welcome</a>
@@ -61,18 +104,17 @@
             <a href="https://goatlas.app" target="_blank" rel="noopener" class="transition hover:text-white"
               >GoAtlas</a
             >
-            <a href="terms/" class="transition hover:text-white">Support</a>
-            <a href="mailto:contact@deepsolutions.llc" class="transition hover:text-white">Contact Us</a>
+            <a href="careers/" class="transition hover:text-white">Careers</a>
           </nav>
         </div>
       </header>
 
       <main id="welcome" class="flex flex-1 items-center justify-center px-6 py-24 text-center">
         <div class="mx-auto max-w-4xl space-y-6">
-          <h1 class="text-5xl font-semibold tracking-tight text-white sm:text-6xl md:text-7xl">
+          <h1 class="text-5xl font-semibold tracking-tight text-white sm:text-6xl md:text-7xl animate-fadeInUp">
             DeepSolutions
           </h1>
-          <p class="text-lg text-white/70 sm:text-m">
+          <p class="text-lg text-white/70 sm:text-m animate-fadeInUp animate-delay-400">
             Deep in thought. Bold in execution.
             <br />
             Focused on the future.
@@ -80,12 +122,13 @@
         </div>
       </main>
 
-      <footer class="bg-transparent">
-        <div class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-6 py-8 text-sm text-white/70">
+      <footer class="bg-transparent animate-fadeIn animate-delay-600">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-8 text-sm text-white/70">
           <div class="flex items-center gap-8">
-            <a href="privacy/" class="transition hover:text-white">Privacy Policy</a>
-            <a href="terms/" class="transition hover:text-white">Terms of Service</a>
-            <a href="terms/" class="transition hover:text-white">Support</a>
+            <a href="mailto:contact@deepsolutions.llc" class="transition hover:text-white">
+              Contact
+            </a>
+            <span class="text-white/60 cursor-not-allowed">LinkedIn</span>
           </div>
           <p class="text-xs text-white/60">
             &copy; <span id="year"></span> Deep Solutions LLC.
